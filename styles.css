@@ -77,7 +77,7 @@ nav.scrolled {
 
 .hero-bg {
     position: absolute; inset: 0;
-    background: url('/img/onega.jpg') center/cover;
+    background: url('/PtzTur/img/onega.jpg') center/cover;
     filter: brightness(0.6);
     transition: transform 8s ease;
 }
@@ -699,7 +699,7 @@ nav.scrolled {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/img/onega.jpg') center/cover;
+    background: url('/PtzTur/img/onega.jpg') center/cover;
     opacity: 0.15;
 }
 
@@ -997,7 +997,7 @@ nav.scrolled {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/img/kizhi.jpg') center/cover;
+    background: url('/PtzTur/img/kizhi.jpg') center/cover;
     opacity: 0.15;
 }
 
