@@ -20,6 +20,270 @@ body {
 }
 
 body.modal-open { overflow: hidden; }
+ 
+        /* ===== ЛОГОТИП В НАВБАР ===== */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .nav-logo .logo-img {
+            height: 55px;
+            width: auto;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #navbar .nav-links {
+            margin-left: auto;
+        }
+
+        /* ===== HERO ===== */
+        .hero-content h1 {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        .hero-content p {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* ===== КАРТОЧКИ ЭКСКУРСИЙ ===== */
+        .route-info {
+            min-height: 280px; /* увеличена высота текстового блока */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .route-info p {
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        .route-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .route-btn {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .route-btn-primary {
+            background: var(--accent, #c9a96e);
+            color: #fff;
+        }
+        .route-btn-secondary {
+            background: transparent;
+            color: var(--accent, #c9a96e);
+            border: 2px solid var(--accent, #c9a96e);
+        }
+        .route-btn-secondary:hover {
+            background: var(--accent, #c9a96e);
+            color: #fff;
+        }
+
+        /* ===== МОДАЛКА ПОДРОБНОСТЕЙ ===== */
+        .tour-modal-body {
+            display: flex;
+            gap: 30px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .tour-modal-image {
+            flex: 0 0 35%; /* уменьшено фото */
+            max-width: 35%;
+        }
+        .tour-modal-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .tour-modal-info {
+            flex: 1;
+        }
+        .tour-modal-info h2 {
+            margin-top: 0;
+        }
+        .tour-program-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .tour-program-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .tour-program-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent, #c9a96e);
+            font-weight: bold;
+        }
+        .tour-program-list li strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text, #333);
+        }
+
+        /* ===== МОДАЛКА БРОНИРОВАНИЯ ===== */
+        .booking-modal-body {
+            display: flex;
+            gap: 0;
+        }
+        .booking-modal-left {
+            flex: 0 0 35%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('/PtzTur/img/onega.jpg') center/cover;
+            padding: 40px 30px;
+            color: #fff;
+            border-radius: 12px 0 0 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .booking-modal-left .booking-logo {
+            margin-bottom: 30px;
+        }
+        .booking-modal-left .booking-logo img {
+            height: 60px;
+            width: auto;
+        }
+        .booking-modal-left h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .booking-modal-left p {
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        .booking-modal-right {
+            flex: 1;
+            padding: 40px 30px;
+        }
+        .booking-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+        }
+        .booking-consent input {
+            margin-top: 3px;
+        }
+        .booking-consent a {
+            color: var(--accent, #c9a96e);
+            text-decoration: underline;
+        }
+        .booking-submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent, #c9a96e);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-submit-btn:hover {
+            background: #b8944f;
+        }
+
+        /* ===== ФУТЕР ===== */
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .footer-social a:hover {
+            background: var(--accent, #c9a96e);
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .footer-logo img {
+            height: 45px;
+            width: auto;
+            margin-right: 12px;
+        }
+
+        /* ===== О НАС ===== */
+        .about-section {
+            padding: 80px 20px;
+            background: #f9f7f3;
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+        .about-text p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 768px) {
+            .tour-modal-body {
+                flex-direction: column;
+            }
+            .tour-modal-image {
+                flex: 1;
+                max-width: 100%;
+            }
+            .booking-modal-body {
+                flex-direction: column;
+            }
+            .booking-modal-left {
+                flex: 1;
+                border-radius: 12px 12px 0 0;
+            }
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            .route-buttons {
+                flex-direction: column;
+            }
+        }
 
 /* NAVBAR */
 nav {
