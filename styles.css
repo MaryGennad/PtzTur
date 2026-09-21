@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --primary: #c9a96a;
@@ -11,7 +15,9 @@
     --text-muted: #999;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -19,277 +25,21 @@ body {
     overflow-x: hidden;
 }
 
-body.modal-open { overflow: hidden; }
- 
-        /* ===== ЛОГОТИП В НАВБАР ===== */
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            margin-right: 40px;
-        }
-        .nav-logo .logo-img {
-            height: 55px;
-            width: auto;
-        }
-        #navbar {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        #navbar .nav-links {
-            margin-left: auto;
-        }
+body.modal-open {
+    overflow: hidden;
+}
 
-        /* ===== HERO ===== */
-        .hero-content h1 {
-            font-size: 1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-        .hero-content p {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        /* ===== КАРТОЧКИ ЭКСКУРСИЙ ===== */
-        .route-info {
-            min-height: 280px; /* увеличена высота текстового блока */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .route-info p {
-            flex-grow: 1;
-            line-height: 1.6;
-        }
-        .route-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        .route-btn {
-            flex: 1;
-            min-width: 140px;
-            text-align: center;
-            padding: 12px 20px;
-            font-size: 0.9rem;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        .route-btn-primary {
-            background: var(--accent, #c9a96e);
-            color: #fff;
-        }
-        .route-btn-secondary {
-            background: transparent;
-            color: var(--accent, #c9a96e);
-            border: 2px solid var(--accent, #c9a96e);
-        }
-        .route-btn-secondary:hover {
-            background: var(--accent, #c9a96e);
-            color: #fff;
-        }
-
-        /* ===== МОДАЛКА ПОДРОБНОСТЕЙ ===== */
-        .tour-modal-body {
-            display: flex;
-            gap: 30px;
-            max-height: 85vh;
-            overflow-y: auto;
-        }
-        .tour-modal-image {
-            flex: 0 0 35%; /* уменьшено фото */
-            max-width: 35%;
-        }
-        .tour-modal-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .tour-modal-info {
-            flex: 1;
-        }
-        .tour-modal-info h2 {
-            margin-top: 0;
-        }
-        .tour-program-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .tour-program-list li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .tour-program-list li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--accent, #c9a96e);
-            font-weight: bold;
-        }
-        .tour-program-list li strong {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--text, #333);
-        }
-
-        /* ===== МОДАЛКА БРОНИРОВАНИЯ ===== */
-        .booking-modal-body {
-            display: flex;
-            gap: 0;
-        }
-        .booking-modal-left {
-            flex: 0 0 35%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('/PtzTur/img/onega.jpg') center/cover;
-            padding: 40px 30px;
-            color: #fff;
-            border-radius: 12px 0 0 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .booking-modal-left .booking-logo {
-            margin-bottom: 30px;
-        }
-        .booking-modal-left .booking-logo img {
-            height: 60px;
-            width: auto;
-        }
-        .booking-modal-left h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-        .booking-modal-left p {
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-        .booking-modal-right {
-            flex: 1;
-            padding: 40px 30px;
-        }
-        .booking-consent {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin: 20px 0;
-            font-size: 0.85rem;
-        }
-        .booking-consent input {
-            margin-top: 3px;
-        }
-        .booking-consent a {
-            color: var(--accent, #c9a96e);
-            text-decoration: underline;
-        }
-        .booking-submit-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--accent, #c9a96e);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .booking-submit-btn:hover {
-            background: #b8944f;
-        }
-
-        /* ===== ФУТЕР ===== */
-        .footer-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            margin-right: 10px;
-            color: #fff;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .footer-social a:hover {
-            background: var(--accent, #c9a96e);
-        }
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .footer-logo img {
-            height: 45px;
-            width: auto;
-            margin-right: 12px;
-        }
-
-        /* ===== О НАС ===== */
-        .about-section {
-            padding: 80px 20px;
-            background: #f9f7f3;
-        }
-        .about-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #2c2c2c;
-        }
-        .about-text p {
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        .about-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* ===== АДАПТИВ ===== */
-        @media (max-width: 768px) {
-            .tour-modal-body {
-                flex-direction: column;
-            }
-            .tour-modal-image {
-                flex: 1;
-                max-width: 100%;
-            }
-            .booking-modal-body {
-                flex-direction: column;
-            }
-            .booking-modal-left {
-                flex: 1;
-                border-radius: 12px 12px 0 0;
-            }
-            .about-container {
-                grid-template-columns: 1fr;
-            }
-            .route-buttons {
-                flex-direction: column;
-            }
-        }
-
-/* NAVBAR */
+/* =========================================
+   NAVBAR
+   ========================================= */
 nav {
-    position: fixed; top: 0; width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 25px 80px;
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1000;
     transition: all 0.4s ease;
     background: transparent;
@@ -301,11 +51,33 @@ nav.scrolled {
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
 }
 
-.nav-logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
-.nav-logo svg { height: 45px; width: auto; transition: all 0.3s ease; }
-.nav-logo:hover svg { transform: scale(1.05); }
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+}
 
-.nav-links { display: flex; gap: 35px; list-style: none; }
+/* === ЧИСТЫЕ ПРАВИЛА ДЛЯ ЛОГОТИПА В ШАПКЕ === */
+.nav-logo img,
+.nav-logo svg {
+    height: 65px;
+    /* Оптимальный размер для навбара */
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover img,
+.nav-logo:hover svg {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
 
 .nav-links a {
     color: rgba(255, 255, 255, 0.85);
@@ -319,37 +91,62 @@ nav.scrolled {
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -4px; left: 0;
-    width: 0; height: 1px;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
     background: var(--primary);
     transition: width 0.3s;
 }
 
-.nav-links a:hover { color: #fff; }
-.nav-links a:hover::after, .nav-links .active::after { width: 100%; }
-.nav-links .active { color: #fff; }
+.nav-links a:hover {
+    color: #fff;
+}
 
-.mobile-toggle { display: none; font-size: 1.5rem; color: #fff; cursor: pointer; }
+.nav-links a:hover::after,
+.nav-links .active::after {
+    width: 100%;
+}
 
-/* HERO */
+.nav-links .active {
+    color: #fff;
+}
+
+.mobile-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
 .hero {
-    height: 100vh; min-height: 700px;
+    height: 100vh;
+    min-height: 700px;
     position: relative;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .hero-bg {
-    position: absolute; inset: 0;
-    background: url('/PtzTur/img/onega.jpg') center/cover;
+    position: absolute;
+    inset: 0;
+    background: url('/PtzTur/img/Рускеала.jpg') center/cover;
     filter: brightness(0.6);
     transition: transform 8s ease;
 }
 
-.hero:hover .hero-bg { transform: scale(1.05); }
+.hero:hover .hero-bg {
+    transform: scale(1.05);
+}
 
 .hero-overlay {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: linear-gradient(to bottom,
             rgba(26, 26, 26, 0.3) 0%,
             rgba(26, 26, 26, 0.1) 50%,
@@ -357,27 +154,49 @@ nav.scrolled {
 }
 
 .hero-content {
-    position: relative; z-index: 2;
-    text-align: center; color: #fff;
-    max-width: 800px; padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
     animation: fadeInUp 1s ease;
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === ПРАВИЛА ДЛЯ ЛОГОТИПА ВНУТРИ HERO (если он там есть) === */
+.hero-logo {
+    max-width: 180px;
+    /* Хороший размер для главного экрана */
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+    display: block;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem; font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 600;
     margin-bottom: 20px;
     letter-spacing: 8px;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
-    font-size: 1.3rem; font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 300;
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: 3px;
     font-style: italic;
@@ -385,22 +204,35 @@ nav.scrolled {
 
 .scroll-down {
     position: absolute;
-    bottom: 40px; left: 50%;
+    bottom: 40px;
+    left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.8rem;
     letter-spacing: 2px;
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     animation: bounce 2s infinite;
     cursor: pointer;
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
 }
 
-/* ROUTE SELECTION */
+/* =========================================
+   ROUTE SELECTION
+   ========================================= */
 .route-selection {
     background: var(--light);
     padding: 80px 80px 60px;
@@ -410,7 +242,9 @@ nav.scrolled {
 .route-selection::before {
     content: '';
     position: absolute;
-    top: -60px; left: 0; right: 0;
+    top: -60px;
+    left: 0;
+    right: 0;
     height: 60px;
     background: var(--light);
     clip-path: ellipse(55% 100% at 50% 100%);
@@ -427,8 +261,10 @@ nav.scrolled {
 }
 
 .route-filters {
-    display: flex; justify-content: center;
-    gap: 20px; flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -460,7 +296,56 @@ nav.scrolled {
     box-shadow: 0 5px 20px rgba(201, 169, 106, 0.4);
 }
 
-/* ROUTES */
+/* =========================================
+   О НАС
+   ========================================= */
+.about-section {
+    padding: 80px 20px;
+    background: #f9f7f3;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптив для "О нас" */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+}
+
+/* =========================================
+   ROUTES (TIMELINE)
+   ========================================= */
 .routes {
     background: var(--light);
     padding: 40px 80px 100px;
@@ -477,17 +362,24 @@ nav.scrolled {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%; top: 0; bottom: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, var(--primary), rgba(201, 169, 106, 0.1));
     transform: translateX(-50%);
-    z-index: 1; /* Линия на заднем плане */
+    z-index: 1;
 }
 
-.route-group { margin-bottom: 60px; scroll-margin-top: 120px; }
-.route-group.hidden { display: none; }
+.route-group {
+    margin-bottom: 60px;
+    scroll-margin-top: 120px;
+}
 
-/* ИЗМЕНЕНИЕ: Блок заголовка группы теперь ПОВЕРХ линии таймлайна */
+.route-group.hidden {
+    display: none;
+}
+
 .route-group-header {
     text-align: center;
     margin-bottom: 50px;
@@ -497,7 +389,7 @@ nav.scrolled {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
     max-width: 1000px;
     position: relative;
-    z-index: 2; /* Блок перекрывает линию */
+    z-index: 2;
 }
 
 .route-group-header i {
@@ -522,23 +414,34 @@ nav.scrolled {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s ease;
-    z-index: 2; /* Карточки тоже поверх линии */
+    z-index: 2;
 }
 
-.route-card.visible { opacity: 1; transform: translateY(0); }
-.route-card.hidden { display: none; }
-.route-card:nth-child(even) { flex-direction: row-reverse; }
+.route-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.route-card.hidden {
+    display: none;
+}
+
+.route-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
 .route-card .route-dot {
     position: absolute;
-    left: 50%; top: 50%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 16px; height: 16px;
+    width: 16px;
+    height: 16px;
     background: var(--primary);
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 0 0 0 3px var(--primary);
-    z-index: 3; /* Точки поверх всего */
+    z-index: 3;
 }
 
 .route-card .route-image {
@@ -556,7 +459,8 @@ nav.scrolled {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%) scale(0);
     color: #fff;
     font-size: 2rem;
@@ -589,16 +493,25 @@ nav.scrolled {
 }
 
 .route-card .route-image img {
-    width: 100%; height: 320px;
+    width: 100%;
+    height: 320px;
     object-fit: cover;
     display: block;
     transition: transform 0.6s ease;
 }
 
-.route-card:hover .route-image img { transform: scale(1.08); }
+.route-card:hover .route-image img {
+    transform: scale(1.08);
+}
 
-.route-card .route-info { width: 45%; padding: 0 60px; }
-.route-card:nth-child(even) .route-info { text-align: right; }
+.route-card .route-info {
+    width: 45%;
+    padding: 0 60px;
+}
+
+.route-card:nth-child(even) .route-info {
+    text-align: right;
+}
 
 .route-info .route-tag {
     display: inline-block;
@@ -626,18 +539,26 @@ nav.scrolled {
 }
 
 .route-details {
-    display: flex; gap: 20px;
+    display: flex;
+    gap: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
 }
 
-.route-card:nth-child(even) .route-details { justify-content: flex-end; }
-
-.route-details span {
-    display: flex; align-items: center; gap: 6px;
+.route-card:nth-child(even) .route-details {
+    justify-content: flex-end;
 }
 
-.route-details i { color: var(--primary); font-size: 0.8rem; }
+.route-details span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.route-details i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
 
 .route-price {
     margin-top: 20px;
@@ -646,41 +567,78 @@ nav.scrolled {
     color: var(--primary);
 }
 
-.route-btn {
-    display: inline-block;
+/* =========================================
+   КНОПКИ В КАРТОЧКАХ
+   ========================================= */
+.route-buttons {
+    display: flex;
+    gap: 15px;
     margin-top: 20px;
-    padding: 12px 30px;
-    background: var(--primary);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: all 0.3s;
+    flex-wrap: wrap;
 }
 
-.route-btn:hover {
+.route-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+}
+
+.route-btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.route-btn-primary:hover {
     background: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(201, 169, 106, 0.4);
 }
 
-/* TOUR MODAL */
+.route-btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+}
+
+.route-btn-secondary:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   TOUR MODAL
+   ========================================= */
 .tour-modal {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     z-index: 2000;
     display: flex;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-.tour-modal.active { opacity: 1; visibility: visible; }
+.tour-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .tour-modal-overlay {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: rgba(10, 10, 20, 0.85);
     backdrop-filter: blur(8px);
     cursor: pointer;
@@ -699,19 +657,24 @@ nav.scrolled {
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.tour-modal.active .tour-modal-content { transform: scale(1) translateY(0); }
+.tour-modal.active .tour-modal-content {
+    transform: scale(1) translateY(0);
+}
 
 .tour-modal-close {
     position: absolute;
-    top: 20px; right: 20px;
-    width: 45px; height: 45px;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.95);
     border: none;
     cursor: pointer;
     z-index: 10;
     display: flex;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
     color: var(--dark);
     transition: all 0.3s ease;
@@ -726,22 +689,46 @@ nav.scrolled {
 
 .tour-modal-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
     max-height: 90vh;
     overflow-y: auto;
 }
-
+/* 
 .tour-modal-image {
-    position: relative;
     overflow: hidden;
     min-height: 400px;
+    /* нейтральный фон по краям, если фото узкое */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tour-modal-image img {
-    width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 90vh;
+    object-fit: contain; */
+    /* ФОТО ПОКАЗЫВАЕТСЯ ЦЕЛИКОМ, БЕЗ ОБРЕЗКИ */
+    /* display: block;
+} */ */
+/* =========================================
+   ФОТО В МОДАЛКЕ — ЗАКРЕПЛЕНО ПРИ СКРОЛЛЕ
+   ========================================= */
+.tour-modal-image {
+    position: relative;
+    background: #f5f2ea;
+    /* ВАЖНО: НЕ ставить overflow:hidden — иначе sticky не сработает */
+}
+
+.tour-modal-image img {
+    position: sticky;   /* фото "прилипает" и всегда на виду */
+    top: 0;
+    width: 100%;
+    height: 90vh;       /* заполняет всю видимую высоту модалки */
+    max-height: 90vh;
+    object-fit: cover;  /* фото видно целиком по ширине, без пустых полей */
+    object-position: center;
     display: block;
-    min-height: 400px;
 }
 
 .tour-modal-info {
@@ -779,7 +766,9 @@ nav.scrolled {
 }
 
 .tour-modal-details {
-    display: flex; gap: 25px; flex-wrap: wrap;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
     padding: 20px 0;
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
@@ -788,12 +777,16 @@ nav.scrolled {
 
 .tour-modal-details .detail-item {
     display: flex;
-    align-items: center; gap: 10px;
+    align-items: center;
+    gap: 10px;
     color: var(--text-light);
     font-size: 0.95rem;
 }
 
-.tour-modal-details .detail-item i { color: var(--primary); font-size: 1rem; }
+.tour-modal-details .detail-item i {
+    color: var(--primary);
+    font-size: 1rem;
+}
 
 .tour-modal-price {
     font-size: 2rem;
@@ -801,15 +794,6 @@ nav.scrolled {
     color: var(--primary);
     margin-bottom: 25px;
     font-family: 'Playfair Display', serif;
-}
-
-.tour-modal-price small {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-top: 5px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .tour-modal-btn {
@@ -831,7 +815,6 @@ nav.scrolled {
     transform: translateY(-3px);
 }
 
-/* СТИЛИ ДЛЯ ПРОГРАММЫ ТУРА В МОДАЛЬНОМ ОКНЕ */
 .tour-program-list {
     list-style: none;
     padding: 0;
@@ -863,12 +846,12 @@ nav.scrolled {
     margin-bottom: 4px;
 }
 
-.full-description ul:last-child {
+.full-description ul {
     margin-top: 10px;
     padding-left: 20px;
 }
 
-.full-description ul:last-child li {
+.full-description ul li {
     margin-bottom: 8px;
     font-size: 0.9rem;
     color: var(--text-light);
@@ -888,20 +871,29 @@ nav.scrolled {
     font-weight: 600;
 }
 
-/* BOOKING MODAL */
+/* =========================================
+   BOOKING MODAL
+   ========================================= */
 .booking-modal {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     z-index: 3000;
     display: flex;
-    align-items: center; justify-content: center;
-    opacity: 0; visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-.booking-modal.active { opacity: 1; visibility: visible; }
+.booking-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .booking-modal-overlay {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: rgba(10, 10, 20, 0.85);
     backdrop-filter: blur(10px);
     cursor: pointer;
@@ -920,19 +912,24 @@ nav.scrolled {
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.booking-modal.active .booking-modal-content { transform: scale(1) translateY(0); }
+.booking-modal.active .booking-modal-content {
+    transform: scale(1) translateY(0);
+}
 
 .booking-modal-close {
     position: absolute;
-    top: 20px; right: 20px;
-    width: 45px; height: 45px;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: #fff;
     border: none;
     cursor: pointer;
     z-index: 10;
     display: flex;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
     color: var(--dark);
     transition: all 0.3s ease;
@@ -957,6 +954,9 @@ nav.scrolled {
     color: #fff;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .booking-modal-left::before {
@@ -967,7 +967,10 @@ nav.scrolled {
     opacity: 0.15;
 }
 
-.booking-modal-left > * { position: relative; z-index: 2; }
+.booking-modal-left>* {
+    position: relative;
+    z-index: 2;
+}
 
 .booking-modal-badge {
     display: inline-block;
@@ -980,6 +983,7 @@ nav.scrolled {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
+    width: fit-content;
 }
 
 .booking-modal-title {
@@ -997,20 +1001,24 @@ nav.scrolled {
     font-size: 0.95rem;
 }
 
-.booking-modal-benefits {
+.booking-modal-meta {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
-.booking-benefit {
+.booking-modal-meta-item {
     display: flex;
-    align-items: center; gap: 12px;
+    align-items: center;
+    gap: 10px;
     color: rgba(255, 255, 255, 0.85);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-.booking-benefit i { color: var(--primary); font-size: 1.1rem; }
+.booking-modal-meta-item i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
 
 .booking-modal-right {
     padding: 50px 50px;
@@ -1018,9 +1026,18 @@ nav.scrolled {
     max-height: 92vh;
 }
 
-.booking-modal-right::-webkit-scrollbar { width: 6px; }
-.booking-modal-right::-webkit-scrollbar-track { background: #f0f0f0; }
-.booking-modal-right::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+.booking-modal-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.booking-modal-right::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.booking-modal-right::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+}
 
 .booking-form {
     display: flex;
@@ -1047,7 +1064,10 @@ nav.scrolled {
     letter-spacing: 0.5px;
 }
 
-.booking-form-group label i { color: var(--primary); margin-right: 6px; }
+.booking-form-group label i {
+    color: var(--primary);
+    margin-right: 6px;
+}
 
 .booking-form-group input,
 .booking-form-group select,
@@ -1065,7 +1085,7 @@ nav.scrolled {
 
 .booking-form-group select {
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a96a' stroke-width='2' stroke-linecap='round' stroke-linecap='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a96a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 18px center;
     background-size: 16px;
@@ -1079,74 +1099,84 @@ nav.scrolled {
     box-shadow: 0 0 0 4px rgba(201, 169, 106, 0.15);
 }
 
-.booking-form-group textarea { resize: vertical; min-height: 80px; }
-
-.booking-form-group input.error,
-.booking-form-group select.error,
-.booking-form-group textarea.error {
-    border-color: #e74c3c;
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
-    animation: shake 0.4s;
+.booking-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-8px); }
-    75% { transform: translateX(8px); }
+.booking-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0 25px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
 }
 
-.booking-contacts { margin-top: 10px; }
-
-.booking-contacts-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--dark);
-    margin-bottom: 15px;
+.booking-consent input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: var(--primary);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-.booking-contacts-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
+.booking-consent a {
+    color: var(--primary);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.booking-consent a:hover {
+    color: var(--primary-hover);
 }
 
 .booking-submit-btn {
-    padding: 14px 20px;
+    width: 100%;
+    padding: 16px;
+    background: var(--primary);
+    color: #fff;
     border: none;
     border-radius: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center; justify-content: center;
-    gap: 8px;
+    letter-spacing: 0.5px;
 }
 
-.booking-submit-telegram { background: #0088cc; color: #fff; }
-.booking-submit-telegram:hover { background: #0077b5; transform: translateY(-2px); }
+.booking-submit-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(201, 169, 106, 0.3);
+}
 
-.booking-submit-whatsapp { background: #25D366; color: #fff; }
-.booking-submit-whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
-
-.booking-submit-email { background: var(--primary); color: #fff; }
-.booking-submit-email:hover { background: var(--primary-hover); transform: translateY(-2px); }
-
-/* SUCCESS MODAL */
+/* =========================================
+   SUCCESS MODAL
+   ========================================= */
 .success-modal {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     z-index: 4000;
     display: flex;
-    align-items: center; justify-content: center;
-    opacity: 0; visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-.success-modal.active { opacity: 1; visibility: visible; }
+.success-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .success-modal-overlay {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: rgba(10, 10, 20, 0.85);
     backdrop-filter: blur(10px);
     cursor: pointer;
@@ -1165,14 +1195,18 @@ nav.scrolled {
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.success-modal.active .success-modal-content { transform: scale(1); }
+.success-modal.active .success-modal-content {
+    transform: scale(1);
+}
 
 .success-icon {
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
     display: flex;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto 25px;
     color: #fff;
     font-size: 2.5rem;
@@ -1181,9 +1215,17 @@ nav.scrolled {
 }
 
 @keyframes successPop {
-    0% { transform: scale(0); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .success-modal-content h3 {
@@ -1219,36 +1261,9 @@ nav.scrolled {
     transform: translateY(-2px);
 }
 
-/* GALLERY */
-.gallery-strip { display: flex; overflow: hidden; height: 300px; }
-
-.gallery-strip .gallery-item {
-    flex: 1;
-    min-width: 25%;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery-strip .gallery-item img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.gallery-strip .gallery-item:hover img { transform: scale(1.1); }
-
-.gallery-strip .gallery-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(26, 26, 26, 0.3);
-    transition: background 0.3s;
-}
-
-.gallery-strip .gallery-item:hover::after { background: rgba(26, 26, 26, 0.1); }
-
-/* CTA */
+/* =========================================
+   CTA & FOOTER
+   ========================================= */
 .cta-section {
     background: var(--dark);
     padding: 100px 80px;
@@ -1261,11 +1276,14 @@ nav.scrolled {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/PtzTur/img/kizhi.jpg') center/cover;
+    background: url('/PtzTur/img/onega.jpg') center/cover;
     opacity: 0.15;
 }
 
-.cta-content { position: relative; z-index: 2; }
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
 
 .cta-content h2 {
     font-family: 'Playfair Display', serif;
@@ -1301,7 +1319,6 @@ nav.scrolled {
     transform: translateY(-3px);
 }
 
-/* FOOTER */
 footer {
     background: #0a0a14;
     padding: 60px 80px 30px;
@@ -1318,11 +1335,16 @@ footer {
 
 .footer-brand .footer-logo {
     display: flex;
-    align-items: center; gap: 10px;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
-.footer-logo svg { height: 50px; width: auto; }
+.footer-logo img,
+.footer-logo svg {
+    height: 65px;
+    width: auto;
+}
 
 .footer-brand .logo-text {
     font-size: 1.5rem;
@@ -1337,14 +1359,19 @@ footer {
     margin-bottom: 20px;
 }
 
-.footer-social { display: flex; gap: 15px; }
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
 
 .footer-social a {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     transition: all 0.3s;
@@ -1365,8 +1392,13 @@ footer {
     letter-spacing: 1px;
 }
 
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
 
 .footer-col ul li a {
     color: rgba(255, 255, 255, 0.5);
@@ -1375,7 +1407,9 @@ footer {
     transition: color 0.3s;
 }
 
-.footer-col ul li a:hover { color: var(--primary); }
+.footer-col ul li a:hover {
+    color: var(--primary);
+}
 
 .footer-bottom {
     max-width: 1200px;
@@ -1389,25 +1423,43 @@ footer {
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 @media (max-width: 1024px) {
-    nav { padding: 20px 30px; }
-    nav.scrolled { padding: 15px 30px; }
-
-    .route-selection, .routes {
-        padding-left: 30px; padding-right: 30px;
+    nav {
+        padding: 20px 30px;
     }
 
-    .timeline::before { left: 30px; }
+    nav.scrolled {
+        padding: 15px 30px;
+    }
 
-    .route-card, .route-card:nth-child(even) { flex-direction: column; }
+    .route-selection,
+    .routes {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .route-card,
+    .route-card:nth-child(even) {
+        flex-direction: column;
+    }
 
     .route-card .route-dot {
-        left: 30px; top: 0;
+        left: 30px;
+        top: 0;
         transform: translate(-50%, 0);
     }
 
-    .route-card .route-image, .route-card .route-info { width: 100%; }
+    .route-card .route-image,
+    .route-card .route-info {
+        width: 100%;
+    }
 
     .route-card .route-info,
     .route-card:nth-child(even) .route-info {
@@ -1415,36 +1467,78 @@ footer {
         padding: 25px 0 0 60px;
     }
 
-    .route-card:nth-child(even) .route-details { justify-content: flex-start; }
+    .route-card:nth-child(even) .route-details {
+        justify-content: flex-start;
+    }
 
-    .footer-container { grid-template-columns: 1fr 1fr; }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
 
-    .tour-modal-body, .booking-modal-body { grid-template-columns: 1fr; }
+    .tour-modal-body,
+    .booking-modal-body {
+        grid-template-columns: 1fr;
+    }
 
-    .tour-modal-image { min-height: 300px; }
-    .tour-modal-image img { min-height: 300px; max-height: 350px; }
+    .tour-modal-image {
+        min-height: 300px;
+    }
 
-    .tour-modal-content, .booking-modal-content { width: 95%; max-height: 95vh; }
+    .tour-modal-image img {
+        min-height: 300px;
+        max-height: 400px;
+        object-fit: contain;
+    }
 
-    .tour-modal-info { padding: 35px 30px; }
-    .booking-modal-left { padding: 50px 40px; }
-    .booking-modal-right { padding: 40px; }
-    .tour-modal-title { font-size: 1.8rem; }
+    .tour-modal-content,
+    .booking-modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .tour-modal-info {
+        padding: 35px 30px;
+    }
+
+    .booking-modal-left {
+        padding: 50px 40px;
+    }
+
+    .booking-modal-right {
+        padding: 40px;
+    }
+
+    .tour-modal-title {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; }
+    .nav-links {
+        display: none;
+    }
 
-    .hero-content h1 { font-size: 2rem; letter-spacing: 3px; }
-    .route-info h3 { font-size: 1.4rem; }
+    .mobile-toggle {
+        display: block;
+    }
 
-    .gallery-strip { flex-wrap: wrap; height: auto; }
-    .gallery-strip .gallery-item { min-width: 50%; height: 200px; }
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
 
-    .cta-content h2 { font-size: 2rem; }
+    .route-info h3 {
+        font-size: 1.4rem;
+    }
 
-    .footer-container { grid-template-columns: 1fr; gap: 30px; }
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
     .footer-bottom {
         flex-direction: column;
@@ -1452,32 +1546,228 @@ footer {
         text-align: center;
     }
 
-    .tour-modal-image { min-height: 250px; }
-    .tour-modal-image img { min-height: 250px; max-height: 280px; }
+    .tour-modal-info {
+        padding: 30px 25px;
+    }
 
-    .tour-modal-info { padding: 30px 25px; }
-    .tour-modal-title { font-size: 1.5rem; }
-    .tour-modal-price { font-size: 1.6rem; }
-    .tour-modal-details { gap: 15px; }
+    .tour-modal-title {
+        font-size: 1.5rem;
+    }
 
-    .booking-modal-left { padding: 40px 30px; }
-    .booking-modal-right { padding: 30px; }
-    .booking-modal-title { font-size: 1.5rem; }
+    .tour-modal-price {
+        font-size: 1.6rem;
+    }
+
+    .tour-modal-details {
+        gap: 15px;
+    }
+
+    .booking-modal-left {
+        padding: 40px 30px;
+    }
+
+    .booking-modal-right {
+        padding: 30px;
+    }
+
+    .booking-modal-title {
+        font-size: 1.5rem;
+    }
+
+    .route-buttons {
+        flex-direction: column;
+    }
+
+    .route-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 { font-size: 1.6rem; letter-spacing: 2px; }
-
-    .route-filters { gap: 10px; }
-    .filter-btn { padding: 8px 18px; font-size: 0.8rem; }
-
-    .tour-modal-content, .booking-modal-content { width: 98%; border-radius: 16px; }
-
-    .tour-modal-close, .booking-modal-close {
-        top: 15px; right: 15px;
-        width: 40px; height: 40px;
+    .hero-content h1 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
     }
 
-    .booking-form-row { grid-template-columns: 1fr; }
-    .booking-contacts-buttons { grid-template-columns: 1fr; }
+    .route-filters {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    .tour-modal-content,
+    .booking-modal-content {
+        width: 98%;
+        border-radius: 16px;
+    }
+
+    .tour-modal-close,
+    .booking-modal-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .booking-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   ПОЛНОЕ ОПИСАНИЕ В МОДАЛКЕ «УЗНАТЬ ПОДРОБНЕЕ»
+   (блок добавлен, ничего не удалено)
+   ========================================= */
+.modal-full-description {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.modal-full-description p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.modal-full-description strong {
+    display: block;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 18px 0 10px;
+    font-size: 1.05rem;
+}
+
+.modal-full-description ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 15px;
+}
+
+.modal-full-description ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.modal-full-description ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+}
+
+.modal-full-description ul.tour-program-list li {
+    padding-left: 28px;
+    margin-bottom: 16px;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.modal-full-description ul.tour-program-list li::before {
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.modal-full-description ul.tour-program-list li strong {
+    margin: 0 0 4px;
+}
+
+.modal-full-description small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   ЛАЙТБОКС ДЛЯ ФОТО (ДОПИСАНО, НЕ УДАЛЕНО)
+   ========================================= */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    background: rgba(10, 10, 20, 0.92);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-lightbox img {
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+.image-lightbox.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.lightbox-close:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.tour-modal-price small {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* =========================================
+   РАЗМЕР ЛОГОТИПА В МОДАЛКЕ БРОНИРОВАНИЯ
+   ========================================= */
+.booking-modal .booking-logo img {
+    height: 60px !important;
+    width: auto !important;
+    max-width: 220px;
+    margin-bottom: 25px;
 }
